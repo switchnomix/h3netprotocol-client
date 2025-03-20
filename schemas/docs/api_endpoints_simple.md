@@ -1,6 +1,6 @@
 # H3Net Protocol API Endpoints (Simplified)
 
-Generated on: Thu Mar 20 23:29:22 UTC 2025
+Generated on: Thu Mar 20 23:47:39 UTC 2025
 
 | Category | Endpoint | Methods |
 | -------- | -------- | ------- |

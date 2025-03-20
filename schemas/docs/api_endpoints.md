@@ -1,6 +1,6 @@
 # H3Net Protocol API Endpoints
 
-Generated on: Thu Mar 20 23:29:21 UTC 2025
+Generated on: Thu Mar 20 23:47:37 UTC 2025
 
 | Category | Endpoint | GET | PUT | POST | DELETE |
 | -------- | -------- | --- | --- | ---- | ------ |
