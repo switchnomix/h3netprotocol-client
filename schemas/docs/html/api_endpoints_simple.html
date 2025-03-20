@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>api_endpoints_simple</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<h1 id="h3net-protocol-api-endpoints-simplified">H3Net Protocol API
+Endpoints (Simplified)</h1>
+<p>Generated on: Thu Mar 20 23:29:22 UTC 2025</p>
+<table>
+<colgroup>
+<col style="width: 34%" />
+<col style="width: 34%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Category</th>
+<th>Endpoint</th>
+<th>Methods</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>acl</td>
+<td>/config/acls</td>
+<td>GET, POST</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/acls/device/{deviceId}</td>
+<td>GET, POST</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/acls/{aclId}</td>
+<td>GET, PUT</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>config</td>
+<td>/config/acls/{deviceId}/{aclName}</td>
+<td>GET, PUT, DELETE</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/acls/{deviceId}/{aclName}/rules</td>
+<td>POST</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/acls/{deviceId}/{aclName}/rules/{ruleId}</td>
+<td>PUT, DELETE</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/devices</td>
+<td>GET, POST</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/devices/info/bulk</td>
+<td>POST</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/devices/{deviceId}</td>
+<td>GET, PUT</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/devices/{deviceId}/info</td>
+<td>GET, POST</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/devices/{deviceId}/interfaces</td>
+<td>GET</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/devices/{deviceId}/interfaces/{interfaceId}</td>
+<td>PUT</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/devices/{deviceId}/system</td>
+<td>GET, PUT</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/routing</td>
+<td>GET, PUT</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/switch</td>
+<td>GET, POST</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/vlan</td>
+<td>GET, PUT, POST</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>core</td>
+<td>/devices</td>
+<td>GET, POST</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/devices/{deviceId}</td>
+<td>GET</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/health</td>
+<td>GET</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/hello</td>
+<td>POST</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>discovery</td>
+<td>/discovery/capabilities</td>
+<td>GET, POST</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/discovery/capabilities/bulk</td>
+<td>POST</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/discovery/network</td>
+<td>GET, POST</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/discovery/network/neighbors/{deviceId}</td>
+<td>GET</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/discovery/network/options</td>
+<td>GET, PUT</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/discovery/network/topology</td>
+<td>GET</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>events</td>
+<td>/events</td>
+<td>POST</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>operations</td>
+<td>/operations/state</td>
+<td>GET, POST</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/operations/state/{deviceId}</td>
+<td>GET, POST</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/operations/state/{deviceId}/interfaces</td>
+<td>GET</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/operations/state/{deviceId}/reboot</td>
+<td>POST</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/operations/state/{deviceId}/tables</td>
+<td>GET</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>pipeline</td>
+<td>/config/pipeline</td>
+<td>GET, POST</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/pipeline/flows</td>
+<td>GET, POST</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/pipeline/tables</td>
+<td>GET, POST</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/pipeline/flows</td>
+<td>GET, POST</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/tables</td>
+<td>GET, POST</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/tables/{tableId}</td>
+<td>GET, PUT</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/tables/{tableId}/pipeline</td>
+<td>POST</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>routing</td>
+<td>/config/routing/all</td>
+<td>GET</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/routing/routes/device/{routeId}</td>
+<td>GET, PUT, DELETE</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/routing/{deviceId}</td>
+<td>GET, PUT</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/routing/{deviceId}/bgp</td>
+<td>GET, PUT</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/routing/{deviceId}/bgp/neighbors</td>
+<td>GET, POST</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/routing/{deviceId}/ospf</td>
+<td>GET, PUT</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/routing/{deviceId}/static</td>
+<td>GET, POST</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/routing/{deviceId}/validate</td>
+<td>POST</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>security</td>
+<td>/security/devices/{deviceId}/roles</td>
+<td>GET, PUT</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/security/roles</td>
+<td>GET, POST</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/security/roles/{roleName}</td>
+<td>GET, PUT, DELETE</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>switch</td>
+<td>/config/switches</td>
+<td>GET</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/switches/{deviceId}</td>
+<td>GET, PUT</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/switches/{deviceId}/features</td>
+<td>GET, PUT</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/switches/{deviceId}/ports</td>
+<td>GET</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/switches/{deviceId}/ports/{portId}</td>
+<td>GET, PUT</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>telemetry</td>
+<td>/telemetry/interface_stats</td>
+<td>POST</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/telemetry/meters</td>
+<td>GET</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/telemetry/metrics</td>
+<td>GET, POST</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/telemetry/metrics/bulk</td>
+<td>POST</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/telemetry/metrics/{deviceId}</td>
+<td>GET</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/telemetry/metrics/{deviceId}/environmental</td>
+<td>GET</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/telemetry/metrics/{deviceId}/resources</td>
+<td>GET</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/telemetry/metrics/{deviceId}/thresholds</td>
+<td>GET, PUT</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/telemetry/stats</td>
+<td>GET</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/telemetry/stats/bulk</td>
+<td>POST</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/telemetry/stats/{deviceId}</td>
+<td>GET</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/telemetry/stats/{deviceId}/interfaces</td>
+<td>GET</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/telemetry/stats/{deviceId}/interfaces/{interfaceId}/counters</td>
+<td>GET, POST, DELETE</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/telemetry/stats/{deviceId}/interfaces/{interfaceId}/errors</td>
+<td>GET</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/telemetry/stats/{deviceId}/interfaces/{interfaceId}/qos</td>
+<td>GET</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>vlan</td>
+<td>/config/vlans</td>
+<td>GET</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/vlans/id/{vlanId}</td>
+<td>GET, PUT</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/vlans/{deviceId}</td>
+<td>GET, POST</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/vlans/{deviceId}/{vlanId}</td>
+<td>GET, PUT, DELETE</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/vlans/{deviceId}/{vlanId}/ports</td>
+<td>PUT</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/vlans/{deviceId}/{vlanId}/properties</td>
+<td>PUT</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

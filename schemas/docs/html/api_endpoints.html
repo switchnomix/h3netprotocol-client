@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>api_endpoints</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<h1 id="h3net-protocol-api-endpoints">H3Net Protocol API Endpoints</h1>
+<p>Generated on: Thu Mar 20 23:29:21 UTC 2025</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Category</th>
+<th>Endpoint</th>
+<th>GET</th>
+<th>PUT</th>
+<th>POST</th>
+<th>DELETE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>acl</td>
+<td>/config/acls</td>
+<td>getAllAcls</td>
+<td>❌</td>
+<td>createAcl</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/acls/device/{deviceId}</td>
+<td>getDeviceAcls</td>
+<td>❌</td>
+<td>createDeviceAcl</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/acls/{aclId}</td>
+<td>getAclConfig</td>
+<td>updateAclConfig</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>config</td>
+<td>/config/acls/{deviceId}/{aclName}</td>
+<td>getACL</td>
+<td>updateACL</td>
+<td>❌</td>
+<td>deleteACL</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/acls/{deviceId}/{aclName}/rules</td>
+<td>❌</td>
+<td>❌</td>
+<td>addACLRule</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/acls/{deviceId}/{aclName}/rules/{ruleId}</td>
+<td>❌</td>
+<td>updateACLRule</td>
+<td>❌</td>
+<td>deleteACLRule</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/devices</td>
+<td>getAllDeviceConfigs</td>
+<td>❌</td>
+<td>createOrUpdateDevice</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/devices/info/bulk</td>
+<td>❌</td>
+<td>❌</td>
+<td>requestBulkDeviceInfo</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/devices/{deviceId}</td>
+<td>getDeviceConfig</td>
+<td>updateDeviceConfig</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/devices/{deviceId}/info</td>
+<td>getDeviceInfo</td>
+<td>❌</td>
+<td>requestDeviceInfo</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/devices/{deviceId}/interfaces</td>
+<td>getDeviceInterfaces</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/devices/{deviceId}/interfaces/{interfaceId}</td>
+<td>❌</td>
+<td>updateInterfaceConfig</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/devices/{deviceId}/system</td>
+<td>getSystemSettings</td>
+<td>updateSystemSettings</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/routing</td>
+<td>getRoutingConfig</td>
+<td>putRoutingConfig</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/switch</td>
+<td>getSwitchConfig</td>
+<td>❌</td>
+<td>updateSwitchConfig</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/vlan</td>
+<td>getVlanConfig</td>
+<td>updateVlanConfig</td>
+<td>createVlanConfig</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>core</td>
+<td>/devices</td>
+<td>getDevices</td>
+<td>❌</td>
+<td>registerDevice</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/devices/{deviceId}</td>
+<td>getDevice</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/health</td>
+<td>core.checkHealth</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/hello</td>
+<td>❌</td>
+<td>❌</td>
+<td>core.sendHello</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>discovery</td>
+<td>/discovery/capabilities</td>
+<td>getDeviceCapabilities</td>
+<td>❌</td>
+<td>queryDeviceCapabilities</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/discovery/capabilities/bulk</td>
+<td>❌</td>
+<td>❌</td>
+<td>queryBulkCapabilities</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/discovery/network</td>
+<td>getNetworkDiscoveryStatus</td>
+<td>❌</td>
+<td>performNetworkDiscovery</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/discovery/network/neighbors/{deviceId}</td>
+<td>getDeviceNeighbors</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/discovery/network/options</td>
+<td>getNetworkDiscoveryOptions</td>
+<td>updateNetworkDiscoveryOptions</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/discovery/network/topology</td>
+<td>getNetworkTopology</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>events</td>
+<td>/events</td>
+<td>❌</td>
+<td>❌</td>
+<td>events.sendEventNotification</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>operations</td>
+<td>/operations/state</td>
+<td>getOperationalState</td>
+<td>❌</td>
+<td>queryDeviceState</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/operations/state/{deviceId}</td>
+<td>getDeviceOperationalState</td>
+<td>❌</td>
+<td>querySpecificDeviceState</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/operations/state/{deviceId}/interfaces</td>
+<td>getDeviceInterfaceStates</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/operations/state/{deviceId}/reboot</td>
+<td>❌</td>
+<td>❌</td>
+<td>rebootDevice</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/operations/state/{deviceId}/tables</td>
+<td>getTableEntries</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>pipeline</td>
+<td>/config/pipeline</td>
+<td>getPipelineConfig</td>
+<td>❌</td>
+<td>updatePipelineConfig</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/pipeline/flows</td>
+<td>getFlowEntries</td>
+<td>❌</td>
+<td>updateFlowEntries</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/pipeline/tables</td>
+<td>getMatchActionTables</td>
+<td>❌</td>
+<td>createMatchActionTable</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/pipeline/flows</td>
+<td>getFlows</td>
+<td>❌</td>
+<td>createFlow</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/tables</td>
+<td>getPipelineTables</td>
+<td>❌</td>
+<td>createTable</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/tables/{tableId}</td>
+<td>getPipelineTable</td>
+<td>updateTable</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/tables/{tableId}/pipeline</td>
+<td>❌</td>
+<td>❌</td>
+<td>updateTablePipelineConfig</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>routing</td>
+<td>/config/routing/all</td>
+<td>getAllRoutingConfigs</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/routing/routes/device/{routeId}</td>
+<td>getRouteConfig</td>
+<td>updateRouteConfig</td>
+<td>❌</td>
+<td>deleteRouteConfig</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/routing/{deviceId}</td>
+<td>getDeviceRoutingConfig</td>
+<td>updateDeviceRoutingConfig</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/routing/{deviceId}/bgp</td>
+<td>getBGPConfig</td>
+<td>updateBGPConfig</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/routing/{deviceId}/bgp/neighbors</td>
+<td>getBGPNeighbors</td>
+<td>❌</td>
+<td>addBGPNeighbor</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/routing/{deviceId}/ospf</td>
+<td>getOSPFConfig</td>
+<td>updateOSPFConfig</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/routing/{deviceId}/static</td>
+<td>getStaticRoutes</td>
+<td>❌</td>
+<td>addStaticRoute</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/routing/{deviceId}/validate</td>
+<td>❌</td>
+<td>❌</td>
+<td>validateRoutingConfig</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>security</td>
+<td>/security/devices/{deviceId}/roles</td>
+<td>getDeviceRoles</td>
+<td>updateDeviceRoles</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/security/roles</td>
+<td>getRoles</td>
+<td>❌</td>
+<td>createRole</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/security/roles/{roleName}</td>
+<td>getRole</td>
+<td>updateRole</td>
+<td>❌</td>
+<td>deleteRole</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>switch</td>
+<td>/config/switches</td>
+<td>getAllSwitches</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/switches/{deviceId}</td>
+<td>getSwitchConfigById</td>
+<td>updateSwitchConfigById</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/switches/{deviceId}/features</td>
+<td>getSwitchFeatures</td>
+<td>updateSwitchFeatures</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/switches/{deviceId}/ports</td>
+<td>getAllPorts</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/switches/{deviceId}/ports/{portId}</td>
+<td>getPortConfig</td>
+<td>updatePortConfig</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>telemetry</td>
+<td>/telemetry/interface_stats</td>
+<td>❌</td>
+<td>❌</td>
+<td>reportInterfaceStats</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/telemetry/meters</td>
+<td>getMeterStats</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/telemetry/metrics</td>
+<td>getTelemetryMetrics</td>
+<td>❌</td>
+<td>reportTelemetryMetrics</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/telemetry/metrics/bulk</td>
+<td>❌</td>
+<td>❌</td>
+<td>getBulkMetrics</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/telemetry/metrics/{deviceId}</td>
+<td>getDeviceMetrics</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/telemetry/metrics/{deviceId}/environmental</td>
+<td>getEnvironmentalMetrics</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/telemetry/metrics/{deviceId}/resources</td>
+<td>getResourceMetrics</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/telemetry/metrics/{deviceId}/thresholds</td>
+<td>getMetricThresholds</td>
+<td>updateMetricThresholds</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/telemetry/stats</td>
+<td>getInterfaceStats</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/telemetry/stats/bulk</td>
+<td>❌</td>
+<td>❌</td>
+<td>getBulkStats</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/telemetry/stats/{deviceId}</td>
+<td>getDeviceStats</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/telemetry/stats/{deviceId}/interfaces</td>
+<td>getDeviceInterfaceStats</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/telemetry/stats/{deviceId}/interfaces/{interfaceId}/counters</td>
+<td>getInterfaceCounters</td>
+<td>❌</td>
+<td>updateInterfaceCounters</td>
+<td>clearInterfaceCounters</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/telemetry/stats/{deviceId}/interfaces/{interfaceId}/errors</td>
+<td>getErrorStats</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/telemetry/stats/{deviceId}/interfaces/{interfaceId}/qos</td>
+<td>getQoSStats</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>vlan</td>
+<td>/config/vlans</td>
+<td>getAllVlanConfigs</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/vlans/id/{vlanId}</td>
+<td>getVlanConfigById</td>
+<td>updateVlanConfigById</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/vlans/{deviceId}</td>
+<td>getDeviceVLANs</td>
+<td>❌</td>
+<td>createVLAN</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/vlans/{deviceId}/{vlanId}</td>
+<td>getVLAN</td>
+<td>updateVLAN</td>
+<td>❌</td>
+<td>deleteVLAN</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>/config/vlans/{deviceId}/{vlanId}/ports</td>
+<td>❌</td>
+<td>updateVLANPorts</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>/config/vlans/{deviceId}/{vlanId}/properties</td>
+<td>❌</td>
+<td>updateVLANProperties</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
